@@ -13,58 +13,56 @@
 
     <title>Login</title>
 </head>
-<body> 
-          <div>
-    
-        <div class="container">
-  
-  <div class="row" id="pwd-container">
-    <div class="col-md-4"></div>
-    
-    <div class="col-md-4">
-      <section class="login-form">
-        <form method="post" action="#" role="login" runat="server">
-         
+ 
           
-                      
-          <div class="pwstrength_viewport_progress"></div>
-                   
-          
-            
-        <img src="Images\tecmed3d-logo.png" class="img-responsive" alt="" /><br />
-        <asp:Label ID="lblempleado" runat="server" Text="Usuario"></asp:Label><br />
-        <asp:TextBox  ID="txtEmpleado" runat="server"  CssClass="textbox"></asp:TextBox><br />
-        <asp:Label ID="lblcontra" runat="server" Text="Contraseña"></asp:Label>
-        <asp:TextBox ID="txtPass" runat="server"  CssClass="textbox" TextMode="Password" ></asp:TextBox> <br />
-        <asp:Button  ID="login" runat="server" Text="Iniciar sesion" CssClass="btnlogin" />
+      <!-- 
+ * parallax_login.html
+ * @Author original @msurguy (tw) -> http://bootsnipp.com/snippets/featured/parallax-login-form
+ * @Tested on FF && CH
+ * @Reworked by @kaptenn_com (tw)
+ * @package PARALLAX LOGIN.
+-->
+        <script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
+        <body>
+            <div class="container">
+                <div class="row vertical-offset-100">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">                                
+                                <div class="row-fluid user-row">
+                                    
+                                    <img src="Images\tecmed3d-logo.png" class="img-responsive" alt="Conxole Admin" />
 
-         
-          
-        
-        
-        
-      </section>  
-      </div>
-      
-      <div class="col-md-4"></div>
-      
 
-  </div>
-  
-  <p>
-    <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fbootsnipp.com%2Fiframe%2FW00op" target="_blank"><small>HTML</small><sup>5</sup></a>
-    <br/>
-    <br/>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <form accept-charset="UTF-8" role="form" class="form-signin" runat="server">
+                                    <fieldset>
+                                        <label class="panel-login">
+                                            <div class="login_result"></div>
+                                        </label>
+                                     
+                                        <asp:TextBox  ID="username" runat="server"  CssClass="form-control" placeholder="Usuario" ></asp:TextBox><br />
+                                     
+
+                                        <asp:TextBox ID="password" runat="server" placeholder="Contraseña" CssClass="form-control" TextMode="Password" ></asp:TextBox> <br />
+
+                                        <br/>
+                                        
+                                         <asp:Button  ID="login" runat="server" Text="Iniciar sesion" CssClass="btn btn-lg btn-success btn-block" />
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+            </div> 
     
-  </p>     
-  
-  
-</div>
-        
-    </div>
-
-
     </div>
     </form>
-</body>
+</>
 </html>
