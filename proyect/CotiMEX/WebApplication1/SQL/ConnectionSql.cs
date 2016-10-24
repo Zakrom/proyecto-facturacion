@@ -3,45 +3,47 @@ using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using System.Linq;
 using System.Web;
+using System.Data;
 
 namespace WebApplication1.SQL
 {
+    //TODO return dataset
     public class ConnectionSql
     {
-        private static string cs = @"server=localhost;Uid=root;persistsecurityinfo=True;pwd=password123;database=cotimex";
+        private static string DB_CONN_STR = @"server=localhost;Uid=root;persistsecurityinfo=True;pwd=password123;database=cotimex";
 
         //TODO load from properties connection string
-        public ConnectionSql()
-        {
+        public DataSet connectionSql(string query)
+        { 
 
-        }
-
-        public static void Main()
-        {
-
-            MySqlConnection conn = null;
-
+            MySqlConnection cn = new MySqlConnection(DB_CONN_STR);
             try
             {
-                conn = new MySqlConnection(cs);
-                conn.Open();
-                Console.WriteLine("Connection initialized");
-                Console.WriteLine("MySQL version : {0}", conn.ServerVersion);
 
+                string sqlCmd = query;
+
+                cn.Open(); // have to explicitly open connection (fetches from pool)
+
+                MySqlCommand cmd = new MySqlCommand(sqlCmd, cn);
+                cmd.CommandType = CommandType.Text;
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    Console.WriteLine(string.Format("user_id = {0}", rdr["user_id"].ToString()));
+                }
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error: {0}", ex.ToString());
-
+                Console.WriteLine("{oops - {0}", ex.Message);
             }
             finally
             {
-                if (conn != null)
-                {
-                    conn.Close();
-                    Console.WriteLine("Connection closed");
-                }
+                cn.Dispose(); // return connection to the pool
             }
+            Console.WriteLine("press any key...");
+            Console.ReadKey();
+            return null;
         }
     }
 }

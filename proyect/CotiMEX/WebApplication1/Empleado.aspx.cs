@@ -15,5 +15,12 @@ namespace WebApplication1
 
             
         }
+
+        private void validateUser()
+        {
+            String user = this.username.Text.Trim();
+            String pass = this.password.Text.Trim();
+        }
+
     }
 }

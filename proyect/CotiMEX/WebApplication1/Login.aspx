@@ -20,7 +20,7 @@
     
    
     <script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
-        <body>
+    
             <div class="container">
                 <div class="row vertical-offset-100">
                     <div class="col-md-4 col-md-offset-4">
@@ -38,7 +38,7 @@
                                         </label>
                                         <asp:Button  ID="btncliente" runat="server" Text="Cliente" CssClass="btn btn-lg btn-success btn-block" />
                                        
-                                        <br/><asp:Button  ID="btnempleado" runat="server" Text="Empleado" CssClass="btn btn-lg btn-success btn-block" />
+                                        <br/><asp:Button  ID="btnempleado" runat="server" Text="Empleado" CssClass="btn btn-lg btn-success btn-block" OnClick="btnEmpleado_Click" />
                                        
                                     </fieldset>
                                 </form>
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </body>
-            </div>
+
 
 
 

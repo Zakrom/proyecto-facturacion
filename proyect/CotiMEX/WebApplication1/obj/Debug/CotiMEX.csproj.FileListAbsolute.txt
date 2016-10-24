@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\Brenda\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\bin\ApplicationInsights.config
 C:\Users\Brenda\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\bin\roslyn\csc.exe
 C:\Users\Brenda\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -78,7 +77,6 @@ C:\Users\Brenda\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplica
 C:\Users\Brenda\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\obj\Debug\CotiMEX.csprojResolveAssemblyReference.cache
 C:\Users\Brenda\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Brenda\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\obj\Debug\WebApplication1.pdb
-=======
 C:\Users\Edgar Valdes\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\obj\Debug\CotiMEX.csprojResolveAssemblyReference.cache
 C:\Users\Edgar Valdes\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\bin\ApplicationInsights.config
 C:\Users\Edgar Valdes\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\bin\roslyn\csc.exe
@@ -167,4 +165,3 @@ C:\Users\Edgar Valdes\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebA
 C:\Users\Edgar Valdes\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Edgar Valdes\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Edgar Valdes\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\obj\Debug\WebApplication1.pdb
->>>>>>> refs/remotes/origin/master

@@ -43,10 +43,10 @@
                                             <div class="login_result"></div>
                                         </label>
                                      
-                                        <asp:TextBox  ID="username" runat="server"  CssClass="form-control" placeholder="Usuario" ></asp:TextBox><br />
+                                        <asp:TextBox  ID="username" runat="server"  CssClass="form-control" placeholder="Usuario" required="true"></asp:TextBox><br />
                                      
 
-                                        <asp:TextBox ID="password" runat="server" placeholder="Contraseña" CssClass="form-control" TextMode="Password" ></asp:TextBox> <br />
+                                        <asp:TextBox ID="password" runat="server" placeholder="Contraseña" CssClass="form-control" TextMode="Password" required="true" ></asp:TextBox> <br />
 
                                         <br/>
                                         
