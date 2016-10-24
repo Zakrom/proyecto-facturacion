@@ -10,13 +10,16 @@ namespace WebApplication1.SQL
     //TODO return dataset
     public class ConnectionSql
     {
+        //Connection string which has password user and other specifications
         private static string DB_CONN_STR = @"server=localhost;Uid=root;persistsecurityinfo=True;pwd=password123;database=cotimex";
 
-        //TODO load from properties connection string
-        public DataSet connectionSql(string query)
+        
+        public static DataSet selectQuery(string query)
         { 
 
             MySqlConnection cn = new MySqlConnection(DB_CONN_STR);
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
             try
             {
 
@@ -24,26 +27,48 @@ namespace WebApplication1.SQL
 
                 cn.Open(); // have to explicitly open connection (fetches from pool)
 
+                //query with connection to run
                 MySqlCommand cmd = new MySqlCommand(sqlCmd, cn);
                 cmd.CommandType = CommandType.Text;
                 MySqlDataReader rdr = cmd.ExecuteReader();
-
-                while (rdr.Read())
-                {
-                    Console.WriteLine(string.Format("user_id = {0}", rdr["user_id"].ToString()));
-                }
+                ds.Tables.Add(dt);
+                ds.EnforceConstraints = false;
+                dt.Load(rdr);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("{oops - {0}", ex.Message);
+                cn.Close();
+                throw new Exception(ex.Message);
             }
-            finally
-            {
-                cn.Dispose(); // return connection to the pool
-            }
-            Console.WriteLine("press any key...");
-            Console.ReadKey();
-            return null;
+           
+                //Close connection whatever happens
+                cn.Close();
+            return ds;
         }
+
+
+        // Executes querys wich won't return a  ResultSet
+        public static int updateQuery(string query)
+        {
+            MySqlConnection conn = new MySqlConnection(DB_CONN_STR);
+            int rowsAffected = 0;
+            try
+            { 
+                conn.Open();
+
+                string sql = query;
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                 rowsAffected = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+
+            conn.Close();
+            Console.WriteLine("Done.");
+            return rowsAffected;
+        } 
+
     }
 }
