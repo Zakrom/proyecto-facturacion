@@ -24,21 +24,14 @@ namespace WebApplication1
 
         public void llenarTabla()
         {
-            //String connectionString = "Data Source=148.234.37.144;Initial Catalog=FIME-FlowSys-TrainingBD;User ID=cacevedo;Password=Carlozasdasd123";
-            //SqlConnection conexion = new SqlConnection(connectionString);
+            DataSet ds = SQL.ConnectionSql.selectQuery("SELECT producto.pto_name as 'Articulo', producto.pto_price as 'Precio', producto.pto_type as 'Disposicion', producto.pto_img as 'Imagen' FROM cotimex.producto;");
 
-            //SqlCommand sqlsp = new SqlCommand("sp_llenarTabla", conexion);
-            //sqlsp.CommandType = CommandType.StoredProcedure;
-
-            //conexion.Open();
-            //SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlsp);
-            //DataSet dataSet = new DataSet();
-            //sqlDataAdapter.Fill(dataSet);
-
-            //this.gridTabla.DataSource = dataSet;
-            //this.gridTabla.DataBind();
-
-            //conexion.Close();
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                row["Imagen"] = ResolveUrl(row["Imagen"].ToString());
+            }
+            this.gridTabla.DataSource = ds;
+            this.gridTabla.DataBind();
 
         }
 
@@ -55,7 +48,7 @@ namespace WebApplication1
 
             DataTable datos = new DataTable();
 
-            ////Tomar los datos del registro seleccionado
+            //Tomar los datos del registro seleccionado
             //String id = this.gridTabla.SelectedRow.Cells[1].Text;
             //String articulo = this.gridTabla.SelectedRow.Cells[2].Text;
             //String precio = this.gridTabla.SelectedRow.Cells[3].Text;
@@ -67,10 +60,10 @@ namespace WebApplication1
 
 
             // Crear nueva columna dentro del gridview  
-            column = new DataColumn();
-            column.DataType = System.Type.GetType("System.Int32");
-            column.ColumnName = "ID";
-            datos.Columns.Add(column);
+            //column = new DataColumn();
+            //column.DataType = System.Type.GetType("System.Int32");
+            //column.ColumnName = "ID";
+            //datos.Columns.Add(column);
 
 
             // Crear nueva columna dentro del gridview  
@@ -101,10 +94,10 @@ namespace WebApplication1
                     {
 
                         row = datos.NewRow();
-                        row["ID"] = item.Cells[1].Text;
-                        row["Articulo"] = item.Cells[2].Text;
-                        row["Precio"] = item.Cells[3].Text;
-                        total += Convert.ToInt32(item.Cells[3].Text);
+                        //row["ID"] = item.Cells[1].Text;
+                        row["Articulo"] = item.Cells[1].Text;
+                        row["Precio"] = item.Cells[2].Text;
+                        total += Convert.ToInt32(item.Cells[2].Text);
                         row["Subtotal"] = total;
                         datos.Rows.Add(row);
                     }

@@ -4,7 +4,7 @@ CREATE TABLE `producto` (
   `pto_id` int(11) NOT NULL AUTO_INCREMENT,
   `pto_name` varchar(100) NOT NULL,
   `pto_price` double NOT NULL,
-  `pto_img` longblob,
+  `pto_img` varchar(255),
   `pto_type` tinyint(4) NOT NULL,
   PRIMARY KEY (`pto_id`),
   UNIQUE KEY `vta_id_UNIQUE` (`pto_id`)

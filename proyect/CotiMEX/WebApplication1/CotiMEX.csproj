@@ -87,6 +87,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -199,6 +200,19 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Images\edgearm.jpg" />
+    <Content Include="Images\edgearm2.png" />
+    <Content Include="Images\gcapture.jpg" />
+    <Content Include="Images\gcontrolx.png" />
+    <Content Include="Images\gdesignx.jpg" />
+    <Content Include="Images\gfsolid.png" />
+    <Content Include="Images\laptopdell.jpg" />
+    <Content Include="Images\laser-tracker.jpg" />
+    <Content Include="Images\platinumarm.jpg" />
+    <Content Include="Images\platinumarm2.png" />
+    <Content Include="Images\tecmed3d-logo.png" />
+    <Content Include="Images\tecmed3d-wl.png" />
+    <Content Include="Images\tripod.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
     <Content Include="PantallaTablas.aspx" />
@@ -299,9 +313,7 @@
       <DependentUpon>VistaCliente.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

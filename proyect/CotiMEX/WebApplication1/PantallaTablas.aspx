@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PantallaTablas.aspx.cs" Inherits="WebApplication1.PantallaTablas" %>
+﻿
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PantallaTablas.aspx.cs" Inherits="WebApplication1.PantallaTablas" %>
 
 <!DOCTYPE html>
 

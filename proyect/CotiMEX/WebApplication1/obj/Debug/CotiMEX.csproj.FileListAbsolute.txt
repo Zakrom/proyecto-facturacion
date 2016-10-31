@@ -164,3 +164,4 @@ C:\Users\Edgar Valdes\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebA
 C:\Users\Edgar Valdes\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Edgar Valdes\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Edgar Valdes\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\Edgar Valdes\Documents\GitHub\proyecto-facturacion\proyect\CotiMEX\WebApplication1\obj\Debug\CotiMEX.csprojResolveAssemblyReference.cache
