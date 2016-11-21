@@ -50,7 +50,7 @@
 
                                         <br/>
                                         
-                                         <asp:Button  ID="login" runat="server" Text="Iniciar sesion" CssClass="btn btn-lg btn-success btn-block" />
+                                         <asp:Button  ID="login" runat="server" Text="Iniciar sesion" CssClass="btn btn-lg btn-success btn-block" onclick="login_Click"/>
 
                                     </fieldset>
                                 </form>
