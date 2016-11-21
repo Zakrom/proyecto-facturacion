@@ -4,3 +4,9 @@ proyect/CotiMEX/WebApplication1/SQL/ConnectionSql.cs
 *.pdb
 *.dll
 *.cache
+proyect/CotiMEX/.vs/CotiMEX/v14/.suo
+*.suo
+*.dll
+*.pdb
+*.cache
+proyect/CotiMEX/WebApplication1/SQL/ConnectionSql.cs

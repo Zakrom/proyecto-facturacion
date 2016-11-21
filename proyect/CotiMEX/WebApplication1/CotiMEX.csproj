@@ -304,6 +304,7 @@
       <DependentUpon>PantallaTablas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLManager.cs" />
     <Compile Include="SQL\ConnectionSql.cs" />
     <Compile Include="VistaCliente.aspx.cs">
       <DependentUpon>VistaCliente.aspx</DependentUpon>

@@ -9,7 +9,7 @@
     <script type="text/javascript"  src="CustomScripts/bootstrap-3.3.7-dist/js\bootstrap.min.js"></script>
      <link rel="stylesheet" href="CustomScripts/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
      <script type="text/javascript" src="CustomScripts/login.js"></script>
-    <link rel="stylesheet" href="CustomScripts/LoginEmpleado.css" />
+    <link rel="stylesheet" href="CustomScripts/Login.css" />
 
     <title>Login</title>
 </head>
@@ -49,7 +49,6 @@
                                         <asp:TextBox ID="password" runat="server" placeholder="Contraseña" CssClass="form-control" TextMode="Password" required="true" ></asp:TextBox> <br />
 
                                         <br/>
-                                        
                                          <asp:Button  ID="login" runat="server" Text="Iniciar sesion" CssClass="btn btn-lg btn-success btn-block" onclick="login_Click"/>
 
                                     </fieldset>

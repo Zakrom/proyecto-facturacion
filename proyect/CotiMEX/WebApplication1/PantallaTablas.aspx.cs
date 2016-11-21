@@ -41,10 +41,7 @@ namespace WebApplication1
 
         protected void gridTabla_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
-
-
+            
         }
 
         protected void btnAgregar_Click(object sender, EventArgs e)

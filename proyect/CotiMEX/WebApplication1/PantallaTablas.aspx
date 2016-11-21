@@ -8,10 +8,11 @@
     <meta charset="utf-8" />
     <title>Productos</title>
     <script src="jquery-1.12.3.js"></script>
+    <script src="Scripts/jquery-1.10.2.js"></script>
     <script src="bootstrap.min.js"></script>
     <link href="bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="StyleTable.css" />
-    <link rel="stylesheet" type="text/css" href="Login.css" />
+    <link rel="stylesheet" type="text/css" href="CustomScripts/Login.css"/>
     <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;" />
     
 
@@ -88,7 +89,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h4 class="modal-title" id="myModalLabel">Prueba correo</h4>
+        <h4 class="modal-title" id="myModalLabel"> Enviar cotizacion por correo </h4>
       </div>
       <div class="modal-body">
         <asp:Label runat="server" ID="lblMailTitle" Text="Direccion de correo destino:"></asp:Label>

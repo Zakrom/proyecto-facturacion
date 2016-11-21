@@ -12,11 +12,21 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+
+
         }
 
         protected void btnEmpleado_Click(object sender, EventArgs e)
         {
             Server.Transfer("Empleado.aspx", true);
+        }
+
+        protected void btncliente_Click(object sender, EventArgs e)
+        {
+            //Server.Transfer("PantallaTablas.aspx", true);
+            this.Response.Redirect("PantallaTablas.aspx");
+
         }
     }
 }
