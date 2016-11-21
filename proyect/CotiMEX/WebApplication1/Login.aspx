@@ -36,7 +36,7 @@
                                         <label class="panel-login">
                                             <div class="login_result"></div>
                                         </label>
-                                        <asp:Button  ID="btncliente" runat="server" Text="Cliente" CssClass="btn btn-lg btn-success btn-block" />
+                                        <asp:Button  ID="btncliente" runat="server" Text="Cliente" CssClass="btn btn-lg btn-success btn-block" OnClick="btncliente_Click" />
                                        
                                         <br/><asp:Button  ID="btnempleado" runat="server" Text="Empleado" CssClass="btn btn-lg btn-success btn-block" OnClick="btnEmpleado_Click" />
                                        

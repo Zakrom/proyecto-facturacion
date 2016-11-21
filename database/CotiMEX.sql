@@ -1,5 +1,23 @@
 CREATE DATABASE `cotimex` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
+CREATE TABLE `producto` (
+  `pto_id` int(11) NOT NULL AUTO_INCREMENT,
+  `pto_name` varchar(100) NOT NULL,
+  `pto_price` double NOT NULL,
+  `pto_img` varchar(255),
+  `pto_type` tinyint(4) NOT NULL,
+  PRIMARY KEY (`pto_id`),
+  UNIQUE KEY `vta_id_UNIQUE` (`pto_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `user` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(45) DEFAULT NULL,
+  `user_password` varchar(45) DEFAULT NULL,
+  `user_salary` double DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 CREATE TABLE `cliente` (
   `cte_id` int(11) NOT NULL AUTO_INCREMENT,
   `cte_name` varchar(255) DEFAULT NULL,
@@ -37,20 +55,18 @@ CREATE TABLE `factura_venta` (
   CONSTRAINT `fk_vta_producto_has_factura_vta_producto` FOREIGN KEY (`pto_id`) REFERENCES `producto` (`pto_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `producto` (
-  `pto_id` int(11) NOT NULL AUTO_INCREMENT,
-  `pto_name` varchar(100) NOT NULL,
-  `pto_price` double NOT NULL,
-  `pto_img` longblob,
-  `pto_type` tinyint(4) NOT NULL,
-  PRIMARY KEY (`pto_id`),
-  UNIQUE KEY `vta_id_UNIQUE` (`pto_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+ALTER TABLE cotimex.producto AUTO_INCREMENT =1;
+INSERT INTO cotimex.producto VALUE (null, 'Brazo FARO Platinum', 420, null, 2);
+INSERT INTO cotimex.producto VALUE (null, 'Brazo FARO Edge', 525, null, 2);
+INSERT INTO cotimex.producto VALUE (null, 'Laptop', 185, null, 2);
+INSERT INTO cotimex.producto VALUE (null, 'Tripie', 53, null, 2);
+INSERT INTO cotimex.producto VALUE (null, 'FARO Laser Tracker', 650, null, 2);
+INSERT INTO cotimex.producto VALUE (null, 'Scanner Geomagic Capture', 10000, null, 1);
+INSERT INTO cotimex.producto VALUE (null, 'Geomagic Design X ', 15000, null, 1);
+INSERT INTO cotimex.producto VALUE (null, 'Geomagic Control ', 12000, null, 1);
+INSERT INTO cotimex.producto VALUE (null, 'Plugin Geomagic for Solidworks', 5000, null, 1);
+INSERT INTO cotimex.producto VALUE (null, 'Entrenamiento Geomagic Design X', 3000, null, 1);
+INSERT INTO cotimex.producto VALUE (null, 'Entrenamiento Geomagic Control', 3000, null, 1);
+SELECT * FROM cotimex.producto;
 
-CREATE TABLE `user` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(45) DEFAULT NULL,
-  `user_password` varchar(45) DEFAULT NULL,
-  `user_salary` double DEFAULT NULL,
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

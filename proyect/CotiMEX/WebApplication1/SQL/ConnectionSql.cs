@@ -12,8 +12,9 @@ namespace WebApplication1.SQL
     {
         //Connection string which has password user and other specifications
         private static string DB_CONN_STR = @"server=localhost;Uid=root;persistsecurityinfo=True;pwd=password123;database=cotimex";
+         
 
-        
+
         public static DataSet selectQuery(string query)
         { 
 
