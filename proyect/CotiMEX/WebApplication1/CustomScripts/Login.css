@@ -7,8 +7,7 @@
     
     body {
         background-color: #444;
-        background: url(http://s18.postimg.org/l7yq0ir3t/pick8_1.jpg);
-        
+       background-image:url(../Images/asd1.jpg);
     }
     .form-signin input[type="text"] {
         margin-bottom: 5px;
