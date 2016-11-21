@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -14,24 +15,23 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void validateUser()
         {
             String user = this.username.Text.Trim();
             String pass = this.password.Text.Trim();
+
+            
         }
 
         protected void login_Click(object sender, EventArgs e)
-        {
-            string user = this.username.Text;
-            string pass = this.password.Text;
+        { 
+            String user = this.username.Text.Trim();
+            String pass = this.password.Text.Trim();
+ 
             ClientScriptManager cs = Page.ClientScript;
-
-          //SqlParameter param1 = new SqlParameter("@user", user);
-          //SqlParameter param2 = new SqlParameter("@pass", pass);
-
 
             DataSet ds = SQL.ConnectionSql.selectQuery("SELECT user_id FROM cotimex.user WHERE user_name = '" + user + "' AND user_password = '" + pass + "';");
             int rowCount = ds.Tables[0].Rows.Count;
@@ -52,15 +52,8 @@ namespace WebApplication1
                 cs.RegisterStartupScript(this.GetType(), "script1", script1);
             }
 
-
-
-           //Datasets = SQL.ConnectionSql.selectQuery("SELECT user_id FROM cotimex.user WHERE user_name = '" + user + "' AND user_password = '" + pass + "';");
-
-
-
         }
 
-     
-
+      
     }
 }

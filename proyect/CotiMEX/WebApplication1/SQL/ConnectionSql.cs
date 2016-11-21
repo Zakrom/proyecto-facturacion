@@ -4,7 +4,6 @@ using MySql.Data.MySqlClient;
 using System.Linq;
 using System.Web;
 using System.Data;
-using System.Data.SqlClient;
 
 namespace WebApplication1.SQL
 {
@@ -12,9 +11,10 @@ namespace WebApplication1.SQL
     public class ConnectionSql
     {
         //Connection string which has password user and other specifications
-        private static string DB_CONN_STR = @"server=localhost;Uid=root;persistsecurityinfo=True;pwd=brenda407;database=cotimex";
+        private static string DB_CONN_STR = @"server=localhost;Uid=root;persistsecurityinfo=True;pwd=password123;database=cotimex";
+         
 
-        
+
         public static DataSet selectQuery(string query)
         { 
 
@@ -71,22 +71,5 @@ namespace WebApplication1.SQL
             return rowsAffected;
         } 
 
-        public static bool IsUserValid(string user, string pass)
-        {
-            using (SqlConnection conn = new SqlConnection(DB_CONN_STR))
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM user WHERE user_name=@user AND user_password=@pass",conn);
-
-                cmd.Parameters.AddWithValue("@user", user);
-                cmd.Parameters.AddWithValue("@pass",pass);
-
-
-                return ((int)cmd.ExecuteScalar() == 1);
-            }
-            
-        }
-        
-        }
-
     }
+}

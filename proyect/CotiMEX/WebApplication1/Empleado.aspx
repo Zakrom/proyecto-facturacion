@@ -49,8 +49,7 @@
                                         <asp:TextBox ID="password" runat="server" placeholder="Contraseña" CssClass="form-control" TextMode="Password" required="true" ></asp:TextBox> <br />
 
                                         <br/>
-                                        
-                                         <asp:Button  ID="login" runat="server" Text="Iniciar sesion" CssClass="btn btn-lg btn-success btn-block" OnClick="login_Click" />
+                                         <asp:Button  ID="login" runat="server" Text="Iniciar sesion" CssClass="btn btn-lg btn-success btn-block" onclick="login_Click"/>
 
                                     </fieldset>
                                 </form>
